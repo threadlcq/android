@@ -57,11 +57,12 @@ public class WebService extends Activity
 				e.printStackTrace();
 			}
 		}
+		public void call(String mobile){  
+	        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + mobile));  
+	        startActivity(intent);  
+	    } 
 	}
 	
-	public void call(String mobile){  
-        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + mobile));  
-        startActivity(intent);  
-    } 
+	
 
 }
